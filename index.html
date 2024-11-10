@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inch Convetore</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="box">
+            <h2 id="h2"></h2>
+        <div class="inputdiv">
+            <input typr="text" id="input" placeholder="00" >
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert</button>
+        </div>
+        <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("h2")
+        h2.innerHTML = "INCH CONVETOR"
+
+        function convert(){
+            const cnVal = Number(document.getElementById("input").value)
+            const inchVal = cnVal/2.54
+            const result = document.getElementById("result")
+            result.innerHTML = inchVal.toFixed(2) + " inches"
+        }
+    </script>
+</body>
+</html>
